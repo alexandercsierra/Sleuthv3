@@ -43,7 +43,7 @@ function setup() {
   var cnv = createCanvas(windowWidth/2, windowHeight/2);
   cnv.style("display", "block");
   cnv.parent("canvas");
-  s = new Snake();
+  s = new Sleuth();
   frameRate(10);
   pickLocation();
 } 
@@ -120,7 +120,7 @@ function keyReleased(){
 }
 
 //constructor function for the snake
-function Snake(){
+function Sleuth(){
   this.x = 20;
   this.y = 20;
   this.xspeed = 0;
