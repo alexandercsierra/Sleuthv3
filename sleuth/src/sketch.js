@@ -2,7 +2,7 @@ import React from "react";
 
 function Sketch (p) {
     var s;
-    var scl = 20;
+    var scl = 10;
     var guest;
     var statement = "i've questioned you";
     var ask = false;
