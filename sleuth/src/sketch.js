@@ -1,4 +1,7 @@
-import React from "react";
+import React, {useState} from 'react';
+import {btnVal} from './buttons';
+
+
 
 function Sketch (p) {
     var s;
@@ -6,8 +9,10 @@ function Sketch (p) {
     var guest;
     var statement = "i've questioned you";
     var ask = false;
-
-
+    let btnVal = "(0,1)";
+    
+    // var [move, setMove] = useState("");
+    
 
 
     p.setup = function () {
@@ -31,6 +36,7 @@ function Sketch (p) {
         p.rect(30, 30, scl, scl);
         s.update();
         s.show();
+        // numStr(btnVal, s.move);
       };
 
 
@@ -86,12 +92,26 @@ function Sketch (p) {
             }
         }
       
+      }//end sleuth
+
+      function numStr (str, cb){
+        let arr = str.split("");
+        let match = [0,1];
+        // console.log(arr);
+        let newArr = [];
+        for (let i=0; i<arr.length; i++){
+          if (match.includes(Number(arr[i])) && arr[i] !== " "){
+            newArr.push(Number(arr[i]));
+          }
+        } let num1 = newArr[0];
+        let num2 = newArr[1];
+        return cb(num1, num2);
       }
 
+      
 
 
 
 
-
-}
+}//end sketch
 export default Sketch;

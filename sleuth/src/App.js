@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState }from 'react';
 import P5Wrapper from 'react-p5-wrapper';
 import Sketch from "./sketch"
-import Buttons from "./buttons";
+import {Buttons} from "./buttons";
+
 
 function App() {
+  
+
+
   return (
     <div>
         <h1>Sleuth</h1>
